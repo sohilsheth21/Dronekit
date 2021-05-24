@@ -107,29 +107,7 @@ def keyboard():
                     condition_yaw(60,1)
             
 
-    ###WHEN THE KEY IS RELEASED
-        if  event.type == pygame.KEYUP:
-                if event.key == pygame.K_UP:
-                    send_ned_velocity(0,0,0,1)
-                elif event.key == pygame.K_DOWN:
-                    send_ned_velocity(0,0,0,1)
-                elif event.key == pygame.K_LEFT:
-                    send_ned_velocity(0,0,0,1)
-                elif event.key == pygame.K_RIGHT:
-                    send_ned_velocity(0,0,0,1)
-                elif event.key == pygame.K_SPACE:
-                    send_ned_velocity(0,0,0,1)
-                elif event.key == pygame.K_s:
-                    send_ned_velocity(0,0,0,1)
-                elif event.key == pygame.K_a:               #A button=yaw left
-                    condition_yaw(0,1)
-                elif event.key == pygame.K_d:              #D button=yaw right
-                    condition_yaw(0,1)
-                
-
-           
-
-        
+          
 
     # main function
 arm_and_takeoff(50) 
