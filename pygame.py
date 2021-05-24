@@ -4,7 +4,7 @@ import  time
 from pymavlink import mavutil
 pygame.init()
 win=pygame.display.set_mode((500,500))
-pygame.display.set_caption("first game")
+
 
 
 print('Connecting to vehicle on: "udp:127.0.0.1:14550" ')
