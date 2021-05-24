@@ -90,56 +90,40 @@ def keyboard():
    #WHEN THE KEY IS PRESSED
         if  event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:  #UP ARROW=FORWARD
-                    print("moving forward") 
                     send_ned_velocity(gnd_speed,0,0,4)  
-                elif event.key == pygame.K_DOWN:         #DOWN ARROW=BACKWARD
-                    print("moving backward")
+                elif event.key == pygame.K_DOWN:         #DOWN ARROW=BACKWARD                 
                     send_ned_velocity(-gnd_speed,0,0,4)  
                 elif event.key == pygame.K_LEFT:          #LEFT ARROW=LEFT
-                    print("moving left")
                     send_ned_velocity(0,-gnd_speed,0,4)  #RIGHT ARROW=RIGHTR
                 elif event.key == pygame.K_RIGHT:
-                    print("moving right ")
                     send_ned_velocity(0,gnd_speed,0,4)  #
                 elif event.key == pygame.K_SPACE:             #SPACE BAR= UP
-                    print("moving up ")
                     send_ned_velocity(0,0,-gnd_speed,4)
                 elif event.key == pygame.K_s:                  #S BUTTON= DOWN
-                    print("moving dowm")
                     send_ned_velocity(0,0,gnd_speed,4)
                 elif event.key == pygame.K_a:               #A button=yaw left
-                    print(" yaw left")
                     condition_yaw(300,1)
                 elif event.key == pygame.K_d:              #D button=yaw right
-                    print("start yaw right")
                     condition_yaw(60,1)
             
 
     ###WHEN THE KEY IS RELEASED
         if  event.type == pygame.KEYUP:
                 if event.key == pygame.K_UP:
-                    print("STOP moving forward") 
                     send_ned_velocity(0,0,0,1)
                 elif event.key == pygame.K_DOWN:
-                    print(" STOP moving backward")
                     send_ned_velocity(0,0,0,1)
                 elif event.key == pygame.K_LEFT:
-                    print(" STOP moving left")
                     send_ned_velocity(0,0,0,1)
                 elif event.key == pygame.K_RIGHT:
-                    print(" STOP moving right ")
                     send_ned_velocity(0,0,0,1)
                 elif event.key == pygame.K_SPACE:
-                    print(" STOP moving up ")
                     send_ned_velocity(0,0,0,1)
                 elif event.key == pygame.K_s:
-                    print(" STOP moving dowm")
                     send_ned_velocity(0,0,0,1)
                 elif event.key == pygame.K_a:               #A button=yaw left
-                    print("STOP yaw left")
                     condition_yaw(0,1)
                 elif event.key == pygame.K_d:              #D button=yaw right
-                    print("STOP yaw right")
                     condition_yaw(0,1)
                 
 
